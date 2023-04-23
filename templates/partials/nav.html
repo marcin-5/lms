@@ -1,0 +1,19 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary" data-bs-theme="dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home:home' %}">
+            <img class="logo" src="{% static 'images/logo.svg' %}" alt="logo LMS">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
