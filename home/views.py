@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
+
 from . import forms
 
 
@@ -14,4 +15,5 @@ def contact(request):
         if form.is_valid():
             form.save()
             return redirect(reverse('home:home'))
+
     return render(request, 'home/contact.html', {"form": form})
