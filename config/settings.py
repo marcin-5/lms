@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # local
     'home.apps.HomeConfig',
     'users.apps.UsersConfig',
+    'courses.apps.CoursesConfig',
 ]
 
 MIDDLEWARE = [
@@ -151,3 +152,6 @@ AUTH_USER_MODEL = 'users.Account'
 LOGIN_URL = 'users/login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
