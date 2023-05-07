@@ -14,6 +14,6 @@ def contact(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect(reverse('home:home'))
+            return redirect(request.GET.get('next', reverse('home:home')))
 
     return render(request, 'home/contact.html', {"form": form})

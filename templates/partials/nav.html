@@ -15,6 +15,12 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'courses:course-create' %}">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'courses:course-list' %}">Courses</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'home:contact' %}">Contact</a>
                 </li>
                 {% if user.is_authenticated %}
